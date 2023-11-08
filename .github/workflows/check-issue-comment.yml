@@ -16,7 +16,7 @@ jobs:
       - name: Check issue comment
         uses: actions/github-script@v6
         env:
-            ISSUE_TITLE: ${{ github.event.issue.title }}
+            ISSUE_COMMENT: ${{ github.event.comment.body }}
         with:
           script: |
             const comment=process.env.ISSUE_COMMENT
